@@ -1,12 +1,12 @@
 version: '3'
 services:
   db:
-    build: db
+    image: mariadb
     environment:
       - MYSQL_ROOT_PASSWORD=root_pwd
-      - WP_DATABASE=wp_data
-      - WP_DB_USER=wp
-      - WP_DB_PWD=insecure-pwd
+      - MYSQL_DATABASE=wp_data
+      - MYSQL_USER=wp
+      - MYSQL_PASSWORD=insecure-pwd
   wordpress:
     build: wp
     ports:
