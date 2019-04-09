@@ -1,0 +1,16 @@
+version: '3'
+services:
+  db:
+    build: db
+    environment:
+      - MYSQL_ROOT_PASSWORD=root_pwd
+      - WP_DATABASE=wp_data
+      - WP_DB_USER=wp
+      - WP_DB_PWD=insecure-pwd
+  wordpress:
+    build: wp
+    ports:
+      - 8080:80
+
+
+      
