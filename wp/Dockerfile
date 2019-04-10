@@ -6,4 +6,4 @@ RUN apk update&& apk add nginx  && \
 COPY . /
 WORKDIR /wordpress
 EXPOSE 80
-CMD ["/entry.sh"]
+CMD ["/bin/sh","/entry.sh"]
